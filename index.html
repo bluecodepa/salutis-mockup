@@ -160,6 +160,24 @@ h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.12;letter-spacin
 .story-figure .fig blockquote{font-family:var(--serif);font-size:1.55rem;line-height:1.35;margin:6px 0 22px}
 .story-figure .fig cite{font-style:normal;font-size:.85rem;opacity:.8}
 
+/* ============ Autor / especialista ============ */
+.autor{background:var(--white)}
+.autor-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center}
+.autor-figure .fig{position:relative;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-lg);background:var(--teal-900)}
+.autor-figure .fig svg{display:block;width:100%;height:auto}
+.autor-figure .nameplate{position:absolute;left:16px;right:16px;bottom:16px;background:rgba(255,255,255,.95);border-radius:12px;padding:12px 16px;box-shadow:var(--shadow-sm)}
+.autor-figure .nameplate b{font-family:var(--serif);font-size:1.06rem;color:var(--teal-900);display:block;line-height:1.2}
+.autor-figure .nameplate span{font-size:.8rem;color:var(--ink-soft)}
+.autor-copy h2{font-size:clamp(1.9rem,3.4vw,2.6rem);margin:16px 0 18px}
+.autor-copy p{color:var(--ink-soft);margin-bottom:16px;font-size:1.04rem}
+.autor-copy p strong{color:var(--teal-900)}
+.creds{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.cred{display:inline-flex;align-items:center;gap:8px;background:var(--sage);color:var(--teal-700);font-size:.85rem;font-weight:600;padding:9px 14px;border-radius:999px}
+.cred svg{width:16px;height:16px;flex:none}
+@media (max-width:900px){
+  .autor-grid{grid-template-columns:1fr;gap:40px}
+}
+
 /* ============ Why / features ============ */
 .why{background:var(--sage)}
 .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
@@ -353,6 +371,90 @@ h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.12;letter-spacin
         <span class="quote-mark">“</span>
         <blockquote>Si tú no estás bien, no podrás cuidar a nadie.</blockquote>
         <cite>— Editorial Salutis · Nuestro compromiso con el cuidador</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Autor / especialista ============ -->
+<section class="autor section" id="especialista">
+  <div class="container autor-grid">
+    <div class="autor-figure reveal">
+      <div class="fig">
+        <svg viewBox="0 0 320 400" role="img" aria-label="Ilustración de una doctora especialista en cardiología">
+          <rect width="320" height="400" rx="28" fill="#0F3036"/>
+          <circle cx="272" cy="66" r="72" fill="#1D4A52"/>
+          <circle cx="36" cy="368" r="92" fill="#1D4A52" opacity=".5"/>
+
+          <!-- cuello -->
+          <rect x="146" y="228" width="28" height="26" rx="10" fill="#E7B88B"/>
+
+          <!-- bata -->
+          <path d="M76 400 V318 Q76 274 118 260 Q148 250 160 250 Q172 250 202 260 Q244 274 244 318 V400 Z" fill="#FFFFFF"/>
+          <!-- camiseta (escote V) -->
+          <path d="M143 250 L160 300 L177 250 Z" fill="#2E6B73"/>
+          <!-- línea central bata -->
+          <line x1="160" y1="300" x2="160" y2="400" stroke="#E3EAEB" stroke-width="2"/>
+
+          <!-- estetoscopio -->
+          <path d="M118 252 Q160 312 202 252" fill="none" stroke="#2E6B73" stroke-width="7" stroke-linecap="round"/>
+          <path d="M160 288 L160 340" stroke="#2E6B73" stroke-width="7" stroke-linecap="round"/>
+          <circle cx="160" cy="352" r="12" fill="#2E6B73"/>
+          <circle cx="157" cy="349" r="4" fill="#7FB0B8"/>
+
+          <!-- gafete -->
+          <rect x="196" y="306" width="30" height="40" rx="5" fill="#FFFFFF" stroke="#DCE3E4" stroke-width="1.5"/>
+          <rect x="200" y="311" width="22" height="16" rx="3" fill="#BFD2D4"/>
+          <rect x="200" y="331" width="22" height="3.5" rx="1.75" fill="#DCE3E4"/>
+          <rect x="200" y="337" width="15" height="3.5" rx="1.75" fill="#DCE3E4"/>
+
+          <!-- cabeza -->
+          <ellipse cx="160" cy="186" rx="50" ry="54" fill="#F4CBA0"/>
+          <!-- orejas -->
+          <ellipse cx="110" cy="192" rx="9" ry="13" fill="#EFC095"/>
+          <ellipse cx="210" cy="192" rx="9" ry="13" fill="#EFC095"/>
+
+          <!-- pelo (recogido / moño) -->
+          <path d="M110 182 Q108 128 160 126 Q212 128 210 182 Q210 154 160 152 Q110 154 110 182 Z" fill="#3A2A20"/>
+          <circle cx="160" cy="122" r="20" fill="#3A2A20"/>
+
+          <!-- cejas -->
+          <path d="M130 178 Q140 172 150 176" stroke="#3A2A20" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <path d="M170 176 Q180 172 190 178" stroke="#3A2A20" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+          <!-- ojos -->
+          <circle cx="140" cy="194" r="3.5" fill="#3A2A20"/>
+          <circle cx="180" cy="194" r="3.5" fill="#3A2A20"/>
+
+          <!-- gafas -->
+          <circle cx="140" cy="194" r="13" fill="none" stroke="#0F3036" stroke-width="2.5"/>
+          <circle cx="180" cy="194" r="13" fill="none" stroke="#0F3036" stroke-width="2.5"/>
+          <path d="M153 192 L167 192" stroke="#0F3036" stroke-width="2.5"/>
+          <path d="M127 189 L114 183" stroke="#0F3036" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M193 189 L206 183" stroke="#0F3036" stroke-width="2.5" stroke-linecap="round"/>
+
+          <!-- rubor -->
+          <circle cx="128" cy="212" r="6" fill="#F2A65A" opacity=".35"/>
+          <circle cx="192" cy="212" r="6" fill="#F2A65A" opacity=".35"/>
+
+          <!-- sonrisa -->
+          <path d="M148 220 Q160 230 172 220" stroke="#B9784E" stroke-width="3" fill="none" stroke-linecap="round"/>
+        </svg>
+        <div class="nameplate">
+          <b>Dra. Elena Ríos</b>
+          <span>Cardiología preventiva · Autora de la guía</span>
+        </div>
+      </div>
+    </div>
+    <div class="autor-copy reveal">
+      <span class="eyebrow">Quién te acompaña</span>
+      <h2>Conocimiento avalado, contado con calma</h2>
+      <p>El contenido de <strong>«El corazón en tus manos»</strong> está escrito y revisado por especialistas en medicina cardiovascular, con años de experiencia acompañando a pacientes y cuidadores.</p>
+      <p>Nuestro enfoque: medicina basada en evidencia, explicada sin tecnicismos, para que cada recomendación se entienda y se pueda aplicar en el día a día.</p>
+      <div class="creds">
+        <span class="cred"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.6-7-10a4.5 4.5 0 0 1 8-2.6A4.5 4.5 0 0 1 21 11c0 5.4-7 10-7 10z"/></svg>Cardiología</span>
+        <span class="cred"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M4 21c0-4 3.5-6 8-6s8 2 8 6"/></svg>15+ años de experiencia</span>
+        <span class="cred"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.1V12a10 10 0 1 1-5.9-9.1"/><path d="M22 4 12 14l-3-3"/></svg>Revisado por pares</span>
       </div>
     </div>
   </div>
